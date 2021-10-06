@@ -24,6 +24,7 @@ const TextWrapper = styled.div`
 const Text = styled.p`
   margin-bottom: 20px;
   text-align: center;
+  font-style: italic;
 `;
 
 const Jokes = ({ children, jokes, query }) => {
@@ -36,7 +37,7 @@ const Jokes = ({ children, jokes, query }) => {
       {query && <Query>{query}</Query>}
       <TextWrapper>
         {jokes?.map((el, index) => (
-          <Text key={index}>{el.value}</Text>
+          <Text key={index}>{`"${el.value}""`}</Text>
         ))}
       </TextWrapper>
       {children}

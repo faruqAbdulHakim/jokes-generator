@@ -66,7 +66,7 @@ const Home = () => {
       <ContentWrapper>
         <FormField onSubmit={searchByTextInputHandler}>
           <InputField
-            placeholder="Input by text"
+            placeholder="Search jokes by text"
             value={textInput}
             onChange={(e) => setTextInput(e.target.value)}
           />
@@ -82,10 +82,10 @@ const Home = () => {
             value={categoryInput}
             onChange={(e) => setCategoryInput(e.target.value)}
           >
-            <option hidden>Choose</option>
+            <option hidden>Search jokes by category</option>
             {jokeCategories.map((el, index) => (
               <option key={index} value={el}>
-                {el}
+                {el[0].toUpperCase() + el.slice(1)}
               </option>
             ))}
           </SelectField>

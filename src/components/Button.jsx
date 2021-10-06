@@ -3,16 +3,16 @@ import styled from 'styled-components';
 
 const Container = styled.button`
   cursor: pointer;
-  background-color: orange;
+  background-color: #b65305;
   padding: 8px;
-  border-radius: 10px;
+  border-radius: 4px;
   border: none;
   color: white;
   &:hover {
-    background-color: #da8d00;
+    background-color: #7c3906;
   }
   &:active {
-    background-color: #724a00;
+    background-color: #492000;
   }
 `;
 

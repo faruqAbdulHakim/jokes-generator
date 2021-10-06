@@ -4,7 +4,7 @@ import { useLocation, useHistory } from 'react-router-dom';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 const Container = styled.div`
-  background-color: #fdefbf;
+  background-color: #fefbea;
   padding: 7px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 `;
@@ -29,6 +29,9 @@ const Logo = styled.h1`
   text-align: center;
   color: orange;
   font-family: 'Stardos Stencil', cursive;
+  @media only screen and (max-width: 640px) {
+    font-size: 20px;
+  }
 `;
 
 const Navigation = () => {

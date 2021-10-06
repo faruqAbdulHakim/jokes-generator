@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Navigation from '../components/Navigation';
 import { useLocation } from 'react-router-dom';
 import Jokes from '../components/Jokes';
+import ContentWrapper from '../components/ContentWrapper';
 
 const Container = styled.div`
   display: flex;
@@ -13,6 +14,8 @@ const Container = styled.div`
 const Category = () => {
   const location = useLocation();
   const [joke, setJoke] = useState();
+  let { categoryInput } = location.state;
+  categoryInput = categoryInput[0].toUpperCase() + categoryInput.slice(1);
 
   useEffect(() => {
     const { categoryInput } = location.state;
@@ -24,7 +27,9 @@ const Category = () => {
   return (
     <Container>
       <Navigation />
-      <Jokes jokes={joke} query={`Category: ${location.state.categoryInput}`} />
+      <ContentWrapper>
+        <Jokes jokes={joke} query={`Category: ${categoryInput}`} />
+      </ContentWrapper>
     </Container>
   );
 };
