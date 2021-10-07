@@ -16,15 +16,28 @@ const FormField = styled.form`
 `;
 const InputField = styled.input`
   flex: 1;
-  border: 0.5px solid gray;
+  min-width: 0;
+  border: none;
   outline: none;
-  padding: 5px 10px;
-  margin-right: 10px;
+  border-radius: 6px;
+  padding: 11px 16px;
+  margin-right: 16px;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
 `;
 const SelectField = styled.select`
   flex: 1;
-  border: 0.5px solid gray;
-  margin-right: 10px;
+  min-width: 0;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 11px 16px;
+  margin-right: 16px;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  & option {
+    font-weight: 600;
+  }
 `;
 
 const Home = () => {
@@ -83,11 +96,14 @@ const Home = () => {
             onChange={(e) => setCategoryInput(e.target.value)}
           >
             <option hidden>Search jokes by category</option>
-            {jokeCategories.map((el, index) => (
-              <option key={index} value={el}>
-                {el[0].toUpperCase() + el.slice(1)}
-              </option>
-            ))}
+            {jokeCategories.map((val, index) => {
+              val = val[0].toUpperCase() + val.slice(1);
+              return (
+                <option key={index} value={val}>
+                  {val}
+                </option>
+              );
+            })}
           </SelectField>
           <Button>Search!</Button>
         </FormField>

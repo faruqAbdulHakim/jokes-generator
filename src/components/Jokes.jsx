@@ -9,20 +9,20 @@ const Container = styled.div`
   align-items: center;
 `;
 const Img = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 `;
 const Query = styled.p`
-  color: orange;
-  font-weight: bold;
-  margin: 10px;
+  color: #b45309;
+  font-weight: 600;
+  margin: 16px 0 12px 0;
 `;
 const TextWrapper = styled.div`
-  margin: 10px 20px;
-  font-weight: bold;
+  margin-top: 16px;
+  font-weight: 600;
 `;
 const Text = styled.p`
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   text-align: center;
   font-style: italic;
 `;
@@ -37,7 +37,7 @@ const Jokes = ({ children, jokes, query }) => {
       {query && <Query>{query}</Query>}
       <TextWrapper>
         {jokes?.map((el, index) => (
-          <Text key={index}>{`"${el.value}""`}</Text>
+          <Text key={index}>{`"${el.value}"`}</Text>
         ))}
       </TextWrapper>
       {children}

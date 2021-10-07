@@ -3,16 +3,19 @@ import styled from 'styled-components';
 
 const Container = styled.button`
   cursor: pointer;
-  background-color: #b65305;
-  padding: 8px;
-  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #b45309;
+  padding: 10px 16px;
+  border-radius: 6px;
   border: none;
   color: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   &:hover {
-    background-color: #7c3906;
+    background-color: #86400a;
   }
   &:active {
-    background-color: #492000;
+    background-color: #552806;
   }
 `;
 
