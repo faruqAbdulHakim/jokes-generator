@@ -33,6 +33,7 @@ const SelectField = styled.select`
   padding: 11px 16px;
   margin-right: 16px;
   cursor: pointer;
+  background-color: white;
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
   position: relative;
   & option {
